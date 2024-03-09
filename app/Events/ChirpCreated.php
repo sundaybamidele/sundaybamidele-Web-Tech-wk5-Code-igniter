@@ -2,6 +2,8 @@
 
 namespace App\Events;
 
+
+use App\Models\Chirp;
 use Illuminate\Broadcasting\Channel;
 use Illuminate\Broadcasting\InteractsWithSockets;
 use Illuminate\Broadcasting\PresenceChannel;
@@ -17,7 +19,7 @@ class ChirpCreated
     /**
      * Create a new event instance.
      */
-    public function __construct()
+    public function __construct(public Chirp $chirp)
     {
         //
     }
